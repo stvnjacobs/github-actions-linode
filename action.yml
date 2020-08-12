@@ -2,10 +2,12 @@ name: 'Your name here'
 description: 'Provide a description here'
 author: 'Your name or organization here'
 inputs:
-  milliseconds: # change this
+  linodeToken:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Linode APIv4 Token'
+outputs:
+  username:
+    description: 'Linode User associated with APIv4 Token'
 runs:
   using: 'node12'
-  main: 'dist/index.js'
+  main: 'main.js'
