@@ -1,11 +1,11 @@
 import * as core from '@actions/core'
-import { setToken, getProfile } from '@linode/api-v4'
+import {setToken, getProfile} from '@linode/api-v4'
 
 async function run(): Promise<void> {
   try {
     const token: string = core.getInput('linodeToken')
 
-    setToken(token);
+    setToken(token)
 
     try {
       const profile = await getProfile()
