@@ -10,4 +10,4 @@ outputs:
     description: 'Linode User associated with APIv4 Token'
 runs:
   using: 'node12'
-  main: 'main.js'
+  main: 'dist/index.js'
