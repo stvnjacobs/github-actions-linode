@@ -25,7 +25,8 @@
   "author": "Steven Jacobs <stjacobs@fastmail.fm>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.4"
+    "@actions/core": "^1.2.4",
+    "@linode/api-v4": "^0.30.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.7",
