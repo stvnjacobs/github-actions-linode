@@ -4,11 +4,9 @@
 
 # github-actions-linode
 
-Use this template to bootstrap the creation of a TypeScript action.:rocket:
+Built from [actions/typescript-action](https://github.com/actions/typescript-action) template.
 
-This template includes compilation support, tests, a validation workflow, publishing, and versioning guidance.  
-
-If you are new, there's also a simpler introduction.  See the [Hello World JavaScript Action](https://github.com/actions/hello-world-javascript-action)
+Template includes compilation support, tests, a validation workflow, publishing, and versioning guidance.
 
 ## Create an action from this template
 
