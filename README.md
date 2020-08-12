@@ -6,15 +6,11 @@
 
 Built from [actions/typescript-action](https://github.com/actions/typescript-action) template.
 
-Template includes compilation support, tests, a validation workflow, publishing, and versioning guidance.
-
-## Create an action from this template
-
-Click the `Use this Template` and provide the new repo details for your action
+Includes compilation support, tests, a validation workflow, publishing, and versioning guidance.
 
 ## Code in Main
 
-Install the dependencies  
+Install the dependencies
 ```bash
 $ npm install
 ```
@@ -24,7 +20,7 @@ Build the typescript and package it for distribution
 $ npm run build && npm run package
 ```
 
-Run the tests :heavy_check_mark:  
+Run the tests :heavy_check_mark:
 ```bash
 $ npm test
 
