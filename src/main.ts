@@ -7,11 +7,12 @@ async function run(): Promise<void> {
 
     setToken(token);
 
-    getProfile()
-      .then(response => {
-        core.setOutput('username', response.username)})
-      .catch(error => {
-        core.setFailed(error.message)});
+    try {
+      const profile = await getProfile()
+      core.setOutput('username', profile.username)
+    } catch (error) {
+      core.setFailed(error.message)
+    }
   } catch (error) {
     core.setFailed(error.message)
   }
