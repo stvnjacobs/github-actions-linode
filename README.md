@@ -2,7 +2,7 @@
   <a href="https://github.com/stvnjacobs/github-actions-linode/actions"><img alt="github-actions-linode status" src="https://github.com/stvnjacobs/github-actions-linode/workflows/build-test/badge.svg"></a>
 </p>
 
-# Create a JavaScript Action using TypeScript
+# github-actions-linode
 
 Use this template to bootstrap the creation of a TypeScript action.:rocket:
 
