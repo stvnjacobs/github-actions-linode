@@ -4960,12 +4960,14 @@ const api_v4_1 = __webpack_require__(651);
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const token = core.getInput('linodeToken');
+            const token = core.getInput('linodeToken', { required: true });
+            const label = core.getInput('label', { required: true });
+            const cluster = core.getInput('cluster');
             api_v4_1.setToken(token);
             try {
                 const bucket = yield api_v4_1.createBucket({
-                    label: `stvnjacobs-manager-${process.env.GITHUB_SHA}`,
-                    cluster: 'us-east-1'
+                    label,
+                    cluster
                 });
                 core.setOutput('bucketLabel', bucket.label);
                 core.setOutput('bucketCreated', bucket.created);

@@ -3,14 +3,16 @@ import {setToken, createBucket} from '@linode/api-v4'
 
 async function run(): Promise<void> {
   try {
-    const token: string = core.getInput('linodeToken')
+    const token: string = core.getInput('linodeToken', {required: true})
+    const label: string = core.getInput('label', {required: true})
+    const cluster: string = core.getInput('cluster')
 
     setToken(token)
 
     try {
       const bucket = await createBucket({
-        label: `stvnjacobs-manager-${process.env.GITHUB_SHA}`,
-        cluster: 'us-east-1'
+        label,
+        cluster
       })
       core.setOutput('bucketLabel', bucket.label)
       core.setOutput('bucketCreated', bucket.created)

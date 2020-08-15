@@ -5,9 +5,24 @@ inputs:
   linodeToken:
     required: true
     description: 'Linode APIv4 Token'
+  label:
+    required: true
+    description: 'Linode Object Storage Bucket label'
+  cluster:
+    required: false
+    default: 'us-east-1'
+    description: 'Linode Object Storage Bucket cluster'
 outputs:
-  username:
-    description: 'Linode User associated with APIv4 Token'
+  bucketLabel:
+    description: 'Linode Object Storage Bucket label'
+  bucketCreated:
+    description: 'Linode Object Storage Bucket create timestamp'
+  bucketCluster:
+    description: 'Linode Object Storage Bucket cluster'
+  bucketHostname:
+    description: 'Linode Object Storage Bucket hostname'
+  bucketSize:
+    description: 'Linode Object Storage Bucket size'
 runs:
   using: 'node12'
   main: 'dist/index.js'

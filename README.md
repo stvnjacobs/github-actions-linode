@@ -86,6 +86,8 @@ You can now validate the action by referencing `./` in a workflow in your repo (
 uses: ./
 with:
   linodeToken: ${{ secrets.LINODE_TOKEN }}
+  label: example
+  cluster: us-east-1
 ```
 
 See the [actions tab](https://github.com/actions/javascript-action/actions) for runs of this action! :rocket:
