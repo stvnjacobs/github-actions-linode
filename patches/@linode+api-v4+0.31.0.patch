@@ -1,0 +1,10 @@
+diff --git a/node_modules/@linode/api-v4/lib/support/types.d.ts b/node_modules/@linode/api-v4/lib/support/types.d.ts
+index 70a3e54..70b1595 100644
+--- a/node_modules/@linode/api-v4/lib/support/types.d.ts
++++ b/node_modules/@linode/api-v4/lib/support/types.d.ts
+@@ -1,4 +1,4 @@
+-import { Entity } from 'src/account/types';
++import { Entity } from '../account/types';
+ export interface SupportTicket {
+     opened: string;
+     id: number;

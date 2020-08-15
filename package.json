@@ -10,6 +10,7 @@
     "format-check": "prettier --check **/*.ts",
     "lint": "eslint src/**/*.ts",
     "package": "ncc build --source-map",
+    "postinstall": "patch-package",
     "test": "jest",
     "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
   },
@@ -39,6 +40,7 @@
     "jest": "^24.9.0",
     "jest-circus": "^26.4.0",
     "js-yaml": "^3.14.0",
+    "patch-package": "^6.2.2",
     "prettier": "2.0.5",
     "ts-jest": "^24.3.0",
     "typescript": "^3.9.7"
