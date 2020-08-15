@@ -4963,8 +4963,15 @@ function run() {
             const token = core.getInput('linodeToken');
             api_v4_1.setToken(token);
             try {
-                const profile = yield api_v4_1.getProfile();
-                core.setOutput('username', profile.username);
+                const bucket = yield api_v4_1.createBucket({
+                    label: `stvnjacobs-manager-${process.env.GITHUB_SHA}`,
+                    cluster: 'us-east-1'
+                });
+                core.setOutput('bucketLabel', bucket.label);
+                core.setOutput('bucketCreated', bucket.created);
+                core.setOutput('bucketCluster', bucket.cluster);
+                core.setOutput('bucketHostname', bucket.hostname);
+                core.setOutput('bucketSize', bucket.size);
             }
             catch (error) {
                 core.setFailed(error.message);
